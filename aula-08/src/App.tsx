@@ -1,21 +1,15 @@
 import { Outlet } from "react-router-dom";
+import Cabecalho from "./components/Cabecalho/Cabecalho";
+import Rodape from "./components/Rodape/Rodape";
 
 export default function App() {
   return (
     <div>
-       <header>
-        <h1>Minha Aplicação</h1>
-        <nav>
-          <a href="/">Home</a> | 
-          <a href="/produtos"> Produtos</a>
-        </nav>
-       </header>
+      <Cabecalho/>
        <div className="container">
          <Outlet/> {/* Renderiza o componente da rota filha aqui */}
        </div>
-        <footer>
-          <p>&copy; 2024 Minha Aplicação</p>
-        </footer>
+       <Rodape/>
     </div>
   );
 }
